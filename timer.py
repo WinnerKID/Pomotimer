@@ -25,13 +25,14 @@ def play_beep():
 
 # Timer function
 def start_timer():
-    # First beep after 25 minutes
-    time.sleep(first * 60)  # Convert 25 minutes to seconds
-    play_beep()
+    for _ in range(num_repeats):
+        # First beep after 25 minutes
+        time.sleep(first * 5)  # Convert 25 minutes to seconds
+        play_beep()
 
-    # Second beep after 5 minutes
-    time.sleep(second * 60)  # Convert 5 minutes to seconds
-    play_beep()
+        # Second beep after 5 minutes
+        time.sleep(second * 5)  # Convert 5 minutes to seconds
+        play_beep()
 
 # Start the timer
 start_timer()
