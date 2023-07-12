@@ -3,14 +3,14 @@ import subprocess
 
 print("Pomodoro Timer\n")
 
-first  = input("Enter your first timer(minutes): ")
-second = input("Enter your first timer(minutes): ")
+first       = input("Enter your first timer(minutes): ")
+second      = input("Enter your first timer(minutes): ")
 num_repeats = input("Enter the number of times the timer will repeat: ")
 
 # Convert inputs to integers
 try:
-    first  = int(first)
-    second = int(second)
+    first       = int(first)
+    second      = int(second)
     num_repeats = int(num_repeats)
     
 except ValueError:
