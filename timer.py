@@ -3,21 +3,21 @@ import subprocess
 
 print("Pomodoro Timer\n")
 
-first = input("Enter your first timer(minutes): ")
+first  = input("Enter your first timer(minutes): ")
 second = input("Enter your first timer(minutes): ")
+num_repeats = input("Enter the number of times the timer will repeat: ")
 
 # Convert inputs to integers
 try:
-    first = int(first)
+    first  = int(first)
     second = int(second)
+    num_repeats = int(num_repeats)
+    
 except ValueError:
-    print("Invalid input. Please enter integers.")
-    exit()
-
-# Verify that the inputs are positive
-if first <= 0 or second <= 0:
-    print("Timers should be greater than zero.")
-    exit()
+    # Verify that the inputs are positive
+    if first <= 0 or second <= 0 or num_repeats <= 0:
+        print("Timers and repeat count should be greater than zero.")
+        exit()
 
 # Function to play the beep sound
 def play_beep():
