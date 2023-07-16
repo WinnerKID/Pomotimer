@@ -9,8 +9,8 @@ num_repeats = input("Enter the number of times the timer will repeat: ")
 
 # Convert inputs to integers
 try:
-    first       = int(first)
-    second      = int(second)
+    first       = int(first) - 1
+    second      = int(second) - 1
     num_repeats = int(num_repeats)
     
 except ValueError:
@@ -26,13 +26,16 @@ def play_beep():
 # Timer function
 def start_timer():
     for _ in range(num_repeats):
-        # First beep 
-        time.sleep(first * 60)  # Convert minutes to seconds
-        play_beep()
-
-        # Second beep
-        time.sleep(second * 60)  # Convert minutes to seconds
-        play_beep()
+        timers = [first, second]
+        for timer in timers:
+            remaining_minutes = timer
+            while remaining_minutes >= 0:
+                for remaining_seconds in range(59, -1, -1):
+                    print(f"\rCountdown: {remaining_minutes:02d}:{remaining_seconds:02d} remaining", end="", flush=True)
+                    time.sleep(1)  # 1 second
+                remaining_minutes -= 1
+            print()  # Print a new line after countdown completion
+            play_beep()
 
 # Start the timer
 start_timer()
