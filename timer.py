@@ -1,4 +1,5 @@
 import time
+import os
 import subprocess
 
 print("Pomodoro Timer\n")
@@ -21,7 +22,10 @@ except ValueError:
 
 # Function to play the beep sound
 def play_beep():
-    subprocess.Popen(["paplay", "/usr/share/sounds/freedesktop/stereo/complete.oga"])
+    # Get the path to the complete.oga file relative to the timer.py script
+    sound_path = os.path.join(os.path.dirname(__file__), "complete.oga")
+    subprocess.Popen(["paplay", sound_path])
+
 
 # Timer function
 def start_timer():
