@@ -1,4 +1,4 @@
-# Study Timer
+# Pomotime
 ![alt text](https://media.discordapp.net/attachments/1016569899340025887/1130181577427660841/image.png)
 
 <p>Pomodoro studying timer</p>
