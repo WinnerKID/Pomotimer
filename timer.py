@@ -47,7 +47,7 @@ layout = [
 ]
 
 # Create the window and set resizable attribute to True
-window = sg.Window("PomoTimer", layout, resizable=True)
+window = sg.Window("PomoTimer", layout, size=(250, 200), resizable=True)
 
 while True:
     event, values = window.read()
