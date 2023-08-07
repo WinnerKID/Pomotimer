@@ -15,7 +15,7 @@ def play_beep():
         subprocess.Popen(["start", "/min", "mplay32", "/play", sound_path], shell=True)
     elif platform.system() == "Darwin":  # macOS
         subprocess.Popen(["afplay", sound_path])
-    else:  # Assume Unix-based systems
+    else:  # Assume Unix-based systems, will work for distribution that uses pulseaudio
         subprocess.Popen(["paplay", sound_path])
 
 # Timer function
