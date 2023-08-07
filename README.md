@@ -15,8 +15,14 @@ pip install -r requirements.txt
 ---
 ### Usage
 1. Clone git repo
-2. In the terminal change directory to cloned repo
-3. Enter ```python timer.py```
+   ```
+   https://github.com/WinnerKID/Pomotimer.git
+   ```
+3. In the terminal change directory to cloned repo
+4. Enter command
+   ```
+   python timer.py
+   ```
 
 
 
